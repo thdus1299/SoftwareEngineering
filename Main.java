@@ -99,3 +99,4 @@ public class Main extends Application{ //ctrl+shift5 //Application은 추상메소드�
 //main은 메인이고, ui를 위한 스레드는 별도임 그거는 launch안에서 만들어짐
 //거기서 start호출됨
 //stage == 윈도우 창
+//dd
