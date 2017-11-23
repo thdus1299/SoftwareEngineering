@@ -10,11 +10,10 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 
-public class Main extends Application{ //ctrl+shift5 //ApplicationÀº Ãß»ó¸Þ¼ÒµåÀÓ
-	@Override //applicationÀº Ãß»ó¸Þ¼Òµå´Ï±î ¾ê°¡ °®°í ÀÖ´Â stageÀçÁ¤ÀÇ 
+public class Main extends Application{ 
+	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-	//ÆÐµù¼³Á¤
 	HBox hbox = new HBox();
 	hbox.setPrefSize(1200, 100);
 	hbox.setAlignment(Pos.CENTER);
@@ -23,55 +22,54 @@ public class Main extends Application{ //ctrl+shift5 //ApplicationÀº Ãß»ó¸Þ¼ÒµåÀ
 	
 	Button button1 = new Button();
 	button1.setPrefSize(200, 50);
-	button1.setText("¸Þ¸ðÀå");
+	button1.setText("¿¿¿");
 	
 	Button button2 = new Button();
 	button2.setPrefSize(200, 50);
-	button2.setText("°è»ê±â");
+	button2.setText("¿¿¿");
 	
 	Button button3 = new Button();
 	button3.setPrefSize(200, 50);
-	button3.setText("°¡°èºÎ");
+	button3.setText("¿¿¿");
 	
 	Button end = new Button();
 	end.setPrefSize(200, 50);
-	end.setText("End");  //¼¼·Î·Î ¹èÄ¡ÇÏ´Â°Ô ³´´Ù. - ¸ñ¿äÀÏ¿¡ ¼öÁ¤¿¹Á¤ 
+	end.setText("End");   
 	
 	button1.setOnAction(new EventHandler<ActionEvent>(){
 		@Override 
 		public void handle(ActionEvent event){
-			System.out.println("¹öÆ°1 Å¬¸¯ "); //»èÁ¦ ¿¹Á¤
-			//MemoManager memoManager = new MemoManager();   //MemoManagerÅ¬·¡½º ¸¸µé¾î¾ß ÇÔ - °¢ÀÚ 
-			//memoManager.start(); //start() ÀÚ¸®¿¡ °¢ÀÚ Å¬·¡½º¿¡¼­ Ã³À½ ½ÃÀÛÇÏ´Â ¸Þ¼Òµå¸¦ Àû¾î¾ß ÇÔ 
+			System.out.println("¿¿¿"); //¿¿¿ ¿¿ ¿¿¿¿ ¿¿¿¿ ¿¿¿ ¿ 
+			//MemoManager memoManager = new MemoManager(); 
+			//memoManager.start(); 
 		}
 	});
 	
 	button2.setOnAction(new EventHandler<ActionEvent>(){
 		@Override 
 		public void handle(ActionEvent event){
-			System.out.println("¹öÆ°2 Å¬¸¯ "); //»èÁ¦ ¿¹Á¤
-			//Calculator calculator = new Calculator();   //CalculatorÅ¬·¡½º ¸¸µé¾î¾ß ÇÔ - °¢ÀÚ 
-			//calculator.start(); //start() ÀÚ¸®¿¡ °¢ÀÚ Å¬·¡½º¿¡¼­ Ã³À½ ½ÃÀÛÇÏ´Â ¸Þ¼Òµå¸¦ Àû¾î¾ß ÇÔ 
+			System.out.println("¿¿¿"); 
+			//Calculator calculator = new Calculator();    
+			//calculator.start(); 
 		}
 	});
 	
 	button3.setOnAction(new EventHandler<ActionEvent>(){
 		@Override 
 		public void handle(ActionEvent event){
-			System.out.println("¹öÆ°3 Å¬¸¯ "); //»èÁ¦ ¿¹Á¤ 
-			//AccountBook accountBook = new AccountBook();   //AccountBookÅ¬·¡½º ¸¸µé¾î¾ß ÇÔ - °¢ÀÚ 
-			//accountBook.start(); //start() ÀÚ¸®¿¡ °¢ÀÚ Å¬·¡½º¿¡¼­ Ã³À½ ½ÃÀÛÇÏ´Â ¸Þ¼Òµå¸¦ Àû¾î¾ß ÇÔ 
-		}
+			System.out.println("¿¿¿");  
+			//AccountBook accountBook = new AccountBook(); 
+			//accountBook.start(); 
+			}
 	});
 	
 	end.setOnAction(new EventHandler<ActionEvent>(){
 		@Override 
 		public void handle(ActionEvent event){
-			Platform.exit(); //or System.exit(0); //»èÁ¦ ¿¹Á¤ 
+			Platform.exit();  
 		}
 	});
 	
-	//¸¶Áø ¼³µÕ
 	HBox.setMargin(button1, new Insets(10, 10, 10, 50));
 	HBox.setMargin(button2, new Insets(10, 10, 10, 50));
 	HBox.setMargin(button3, new Insets(10, 10, 10, 50));
@@ -84,18 +82,11 @@ public class Main extends Application{ //ctrl+shift5 //ApplicationÀº Ãß»ó¸Þ¼ÒµåÀ
 	Scene scene = new Scene(hbox);
 	primaryStage.setTitle("Main");
 	primaryStage.setScene(scene);
-	primaryStage.show();//À©µµ¿ì º¸¿©ÁÖ±â	
+	primaryStage.show();
 	}
 	
-	public static void main(String[] args) { //jvm¿¡¼­ ½ÇÇàÇØ¾ßµÇ´Ï ¸ÞÀÎµµ 
-		launch(args); //¶Ç´Â Application.launch(args);
-					//launch´Â ³»ºÎÀûÀ¸·Î javafx application½º·¹µå¸¦ ¸¸µë
-					//start È£ÃâÇÒ °ÅÀÓ
+	public static void main(String[] args) {  
+		launch(args); 
 	}
 }
 
-//AppMain °´Ã¼ »ý¼º ¹× ¸ÞÀÎ À©µµ¿ì »ý¼º(¿ä±â±îÁö ÇØ¾ß À©µµ¿ì Ã¢ ¶ä)
-//launch´Â applicationÀÌ °®°í ÀÖ´Â Á¤Àû ¸Þ¼ÒµåÀÓ 
-//mainÀº ¸ÞÀÎÀÌ°í, ui¸¦ À§ÇÑ ½º·¹µå´Â º°µµÀÓ ±×°Å´Â launch¾È¿¡¼­ ¸¸µé¾îÁü
-//°Å±â¼­ startÈ£ÃâµÊ
-//stage == À©µµ¿ì Ã¢
