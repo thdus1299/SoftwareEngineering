@@ -141,4 +141,4 @@ class MainController implements Initializable { //(미완) 방법 2 : 버튼당 컨트롤�
 	}
 	
 }
-*///hi//
+*///hellohi//
