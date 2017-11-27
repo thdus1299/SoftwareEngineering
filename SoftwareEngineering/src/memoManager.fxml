@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane 
+	fx:id="memoManager" 
+	prefHeight="500.0" 
+	prefWidth="500.0" 
+	xmlns:fx="http://javafx.com/fxml"
+	fx:controller="MemoManagerController">
+  <center>
+    <Button fx:id="btnMain" mnemonicParsing="false" text="메인화면으로 돌아가기 " />
+  </center>
+</BorderPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane 
+	prefHeight="374" 
+	prefWidth="305" 
+	xmlns:fx="http://javafx.com/fxml"
+	fx:controller="MainController"> <!-- 컨트롤러를 지정하면 UI컨트롤에서 발생하는 이벤트를 컨트롤러가 처리한다. -->
+  <children>
+    <VBox prefHeight="250.0" prefWidth="321.0">
+      <children>
+        <Button fx:id="btnMemoManager" minWidth="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" text="메모매니저 ">
+          <VBox.margin>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="30.0" fx:id="x1" />
+          </VBox.margin>
+        </Button>
+        <Button fx:id="btnCalculator" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" text="계산기" VBox.margin="$x1" />
+        <Button fx:id="btnAccountBook" mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" text="가계부" VBox.margin="$x1" />
+        <Button fx:id="end" prefHeight="40.0" prefWidth="280.0" text="종료" VBox.margin="$x1" />
+      </children>
+    </VBox>
+  </children>
+</StackPane>
