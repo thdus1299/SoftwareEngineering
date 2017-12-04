@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane 
-	fx:id="calculator" 
-	prefHeight="500.0" 
-	prefWidth="500.0" 
-	xmlns:fx="http://javafx.com/fxml"
-	fx:controller="CalculatorController">
-  <center>
-    <Button fx:id="btnMain" mnemonicParsing="false" text="메인화면으로 돌아가기 " />
-  </center>
-</BorderPane>
+<SplitPane fx:id="Calculator" dividerPositions="0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CalculatorController">
+   <items>
+      <Label prefHeight="25.0" prefWidth="575.0" text="계산 결과 창" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+        <items>
+            <TextField fx:id="resultText" editable="false" prefHeight="36.0" prefWidth="598.0" text="0" />
+            <Button fx:id="btnMain" mnemonicParsing="false" prefHeight="23.0" prefWidth="173.0" text="메인 화면으로 돌아가기" />
+        </items>
+      </SplitPane>
+      <Label prefHeight="25.0" prefWidth="575.0" text="사칙 연산" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0">
+         <items>
+            <TextField fx:id="calcNum1" />
+            <TextField fx:id="calcNum2" />
+         </items>
+      </SplitPane>
+      <Button fx:id="addButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="add" />
+      <Button fx:id="subButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="sub" />
+      <Button fx:id="mulButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="multi" />
+      <Button fx:id="divButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="divide" />
+      <Label prefHeight="25.0" prefWidth="575.0" text="단위 변환" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tranNum" />
+      <Button fx:id="poundToKgButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="poundToKg" />
+      <Button fx:id="kgToPoundButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="kgToPound" />
+      <Button fx:id="inchToCmButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="inchToCm" />
+      <Button fx:id="cmToInchButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="cmToInch" />
+      <Button fx:id="fahToCelButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="fahToCel" />
+      <Button fx:id="celToFahButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="592.0" text="celToFah" />
+   </items>
+</SplitPane>
